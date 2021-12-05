@@ -28,15 +28,17 @@ extension MainPresenter: MainInteractorOutputProtocol {
     }
     
     func loadFinished(with datas: [City]) {
-        var sections: [SectionViewModel] = Region.allCases.map { .init(title: $0.description) }
-        for city in datas {
-            let region = regionMapper.map(city: city)
-            let subtitle = cityMapper.flag(for: city)
-            let image = regionMapper.image(for: region)
-            let model = MainViewModel(for: city, title: city.description, subtitle: subtitle, image: image)
-            for item in sections.enumerated() where region.description == item.element.title {
-                sections[item.offset].items.append(model)
+        var sections: [SectionViewModel] = []
+        for region in Region.allCases {
+            let builder = SectionBuilder(title: region.description)
+            for city in datas where regionMapper.map(city: city) == region {
+                let subtitle = cityMapper.flag(for: city)
+                let image = regionMapper.image(for: region)
+                let model = MainViewModel(for: city, title: city.description, subtitle: subtitle, image: image)
+                builder.addItem(model)
             }
+            sections.append(builder.build())
+            
         }
         view?.showDatas(with: sections)
     }
