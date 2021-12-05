@@ -18,6 +18,12 @@
 		4D93733F275D1FA700B53555 /* CityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93733E275D1FA700B53555 /* CityMapper.swift */; };
 		4D937341275D227200B53555 /* MainFactroy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D937340275D227200B53555 /* MainFactroy.swift */; };
 		4D937343275D237600B53555 /* DetailFactroy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D937342275D237600B53555 /* DetailFactroy.swift */; };
+		4D937345275D27C600B53555 /* DetailStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D937344275D27C600B53555 /* DetailStrategy.swift */; };
+		4D937348275D2BE600B53555 /* DetailStartegyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D937347275D2BE600B53555 /* DetailStartegyFactory.swift */; };
+		4D93734A275D2C0E00B53555 /* R1DetailStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D937349275D2C0E00B53555 /* R1DetailStrategy.swift */; };
+		4D93734C275D2C1800B53555 /* R2DetailStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93734B275D2C1800B53555 /* R2DetailStrategy.swift */; };
+		4D93734E275D2C2500B53555 /* R3DetailStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93734D275D2C2500B53555 /* R3DetailStrategy.swift */; };
+		4D937350275D2C3000B53555 /* R4DetailStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93734F275D2C3000B53555 /* R4DetailStrategy.swift */; };
 		CE20EE322224C56E00522506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20EE312224C56E00522506 /* AppDelegate.swift */; };
 		CE20EE372224C56E00522506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE20EE352224C56E00522506 /* Main.storyboard */; };
 		CE20EE392224C57000522506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE20EE382224C57000522506 /* Assets.xcassets */; };
@@ -46,6 +52,12 @@
 		4D93733E275D1FA700B53555 /* CityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityMapper.swift; sourceTree = "<group>"; };
 		4D937340275D227200B53555 /* MainFactroy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFactroy.swift; sourceTree = "<group>"; };
 		4D937342275D237600B53555 /* DetailFactroy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFactroy.swift; sourceTree = "<group>"; };
+		4D937344275D27C600B53555 /* DetailStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStrategy.swift; sourceTree = "<group>"; };
+		4D937347275D2BE600B53555 /* DetailStartegyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStartegyFactory.swift; sourceTree = "<group>"; };
+		4D937349275D2C0E00B53555 /* R1DetailStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R1DetailStrategy.swift; sourceTree = "<group>"; };
+		4D93734B275D2C1800B53555 /* R2DetailStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R2DetailStrategy.swift; sourceTree = "<group>"; };
+		4D93734D275D2C2500B53555 /* R3DetailStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R3DetailStrategy.swift; sourceTree = "<group>"; };
+		4D93734F275D2C3000B53555 /* R4DetailStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R4DetailStrategy.swift; sourceTree = "<group>"; };
 		CE20EE2E2224C56E00522506 /* ChocoWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChocoWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE20EE312224C56E00522506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE20EE362224C56E00522506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +128,19 @@
 			path = Commons;
 			sourceTree = "<group>";
 		};
+		4D937346275D2BC200B53555 /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				4D937344275D27C600B53555 /* DetailStrategy.swift */,
+				4D937347275D2BE600B53555 /* DetailStartegyFactory.swift */,
+				4D937349275D2C0E00B53555 /* R1DetailStrategy.swift */,
+				4D93734B275D2C1800B53555 /* R2DetailStrategy.swift */,
+				4D93734D275D2C2500B53555 /* R3DetailStrategy.swift */,
+				4D93734F275D2C3000B53555 /* R4DetailStrategy.swift */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
 		CE20EE252224C56E00522506 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +194,7 @@
 		CEFC522F222CA01D0065EABB /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				4D937346275D2BC200B53555 /* Strategies */,
 				CEFC5225222C9AFF0065EABB /* DetailView.swift */,
 				CEFC5227222C9B120065EABB /* DetailRouter.swift */,
 				CEFC5229222C9B1B0065EABB /* DetailInteractor.swift */,
@@ -251,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D93734E275D2C2500B53555 /* R3DetailStrategy.swift in Sources */,
 				CEFC522E222C9B2E0065EABB /* DetailProtocols.swift in Sources */,
 				4D937341275D227200B53555 /* MainFactroy.swift in Sources */,
 				4D6257C1275CF3F00098419C /* Region.swift in Sources */,
@@ -263,14 +290,19 @@
 				4D6257BF275CF3D40098419C /* RegionMapper.swift in Sources */,
 				CEFC5228222C9B120065EABB /* DetailRouter.swift in Sources */,
 				4D93733F275D1FA700B53555 /* CityMapper.swift in Sources */,
+				4D937348275D2BE600B53555 /* DetailStartegyFactory.swift in Sources */,
 				CEFC522C222C9B230065EABB /* DetailPresenter.swift in Sources */,
 				4D6257C3275CFE960098419C /* DetailViewModel.swift in Sources */,
+				4D93734A275D2C0E00B53555 /* R1DetailStrategy.swift in Sources */,
+				4D937350275D2C3000B53555 /* R4DetailStrategy.swift in Sources */,
 				4D6257BD275CE6080098419C /* WeatherMapper.swift in Sources */,
+				4D937345275D27C600B53555 /* DetailStrategy.swift in Sources */,
 				CE20EE322224C56E00522506 /* AppDelegate.swift in Sources */,
 				4D6257C5275D05130098419C /* MainViewModel.swift in Sources */,
 				CEFC522A222C9B1B0065EABB /* DetailInteractor.swift in Sources */,
 				4D6257B7275CD01E0098419C /* City.swift in Sources */,
 				CE5D6FFC22291DD200BA84F8 /* MainPresenter.swift in Sources */,
+				4D93734C275D2C1800B53555 /* R2DetailStrategy.swift in Sources */,
 				CE5D6FFA22291D8D00BA84F8 /* MainProtocols.swift in Sources */,
 				4D6257B4275CBE180098419C /* Repository.swift in Sources */,
 			);

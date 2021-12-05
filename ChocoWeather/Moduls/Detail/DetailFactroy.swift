@@ -17,11 +17,12 @@ final class DetailFactroy: DetailFactroyProtocol {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let view = storyboard.instantiateViewController(withIdentifier: "DetailView")
         if let view = view as? DetailView {
-            let presenter: DetailPresenterProtocol & DetailInteractorOutputProtocol = DetailPresenter(
-                city: city,
+            let detailStartegyFactory = DetailStartegyFactory(
                 weatherStatusMapper: weatherMapper,
                 regionMapper: regionMapper
             )
+            let strategy = detailStartegyFactory.make(region: regionMapper.map(city: city))
+            let presenter: DetailPresenterProtocol & DetailInteractorOutputProtocol = DetailPresenter(city: city, strategy: strategy)
             let repository: RepositoryProtocol = Repository()
             let interactor: DetailInteractorInputProtocol = DetailInteractor(repository: repository)
             let router: DetailRouterProtocol = DetailRouter()
