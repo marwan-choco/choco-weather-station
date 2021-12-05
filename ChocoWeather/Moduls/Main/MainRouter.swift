@@ -2,37 +2,15 @@ import UIKit
 
 class MainRouter: MainRouterProtocol {
     let view: MainViewProtocol
+    let detailFactory: DetailFactroyProtocol
     
-    init(view: MainViewProtocol) {
+    init(view: MainViewProtocol, detailFactory: DetailFactroyProtocol) {
         self.view = view
+        self.detailFactory = detailFactory
     }
     
     func presentPostDetailScreen(for data: City) {
-        
-        var viewController = UIViewController()
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let view = storyboard.instantiateViewController(withIdentifier: "DetailView")
-        if let view = view as? DetailView {
-            let weatherStatusMapper = WeatherMapper()
-            let regionMapper: RegionMapperProtocol = RegionMapper()
-            let presenter: DetailPresenterProtocol & DetailInteractorOutputProtocol = DetailPresenter(
-                city: data,
-                weatherStatusMapper: weatherStatusMapper,
-                regionMapper: regionMapper
-            )
-            let repository: RepositoryProtocol = Repository()
-            let interactor: DetailInteractorInputProtocol = DetailInteractor(repository: repository)
-            let router: DetailRouterProtocol = DetailRouter()
-            
-            view.presenter = presenter
-            presenter.view = view
-            presenter.router = router
-            presenter.interactor = interactor
-            interactor.presenter = presenter
-            
-            viewController = view
-        }
-        
+        let viewController = detailFactory.make(city: data)
         if let sourceView = self.view as? UIViewController {
             sourceView.navigationController?.pushViewController(viewController, animated: true)
         }

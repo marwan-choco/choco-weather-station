@@ -16,6 +16,8 @@
 		4D6257C3275CFE960098419C /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6257C2275CFE960098419C /* DetailViewModel.swift */; };
 		4D6257C5275D05130098419C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6257C4275D05130098419C /* MainViewModel.swift */; };
 		4D93733F275D1FA700B53555 /* CityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93733E275D1FA700B53555 /* CityMapper.swift */; };
+		4D937341275D227200B53555 /* MainFactroy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D937340275D227200B53555 /* MainFactroy.swift */; };
+		4D937343275D237600B53555 /* DetailFactroy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D937342275D237600B53555 /* DetailFactroy.swift */; };
 		CE20EE322224C56E00522506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE20EE312224C56E00522506 /* AppDelegate.swift */; };
 		CE20EE372224C56E00522506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE20EE352224C56E00522506 /* Main.storyboard */; };
 		CE20EE392224C57000522506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE20EE382224C57000522506 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		4D6257C2275CFE960098419C /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		4D6257C4275D05130098419C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		4D93733E275D1FA700B53555 /* CityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityMapper.swift; sourceTree = "<group>"; };
+		4D937340275D227200B53555 /* MainFactroy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFactroy.swift; sourceTree = "<group>"; };
+		4D937342275D237600B53555 /* DetailFactroy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFactroy.swift; sourceTree = "<group>"; };
 		CE20EE2E2224C56E00522506 /* ChocoWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChocoWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE20EE312224C56E00522506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE20EE362224C56E00522506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				CE5D6FFB22291DD200BA84F8 /* MainPresenter.swift */,
 				CE5D6FF922291D8D00BA84F8 /* MainProtocols.swift */,
 				4D6257C4275D05130098419C /* MainViewModel.swift */,
+				4D937340275D227200B53555 /* MainFactroy.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				CEFC522B222C9B230065EABB /* DetailPresenter.swift */,
 				CEFC522D222C9B2E0065EABB /* DetailProtocols.swift */,
 				4D6257C2275CFE960098419C /* DetailViewModel.swift */,
+				4D937342275D237600B53555 /* DetailFactroy.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -246,9 +252,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEFC522E222C9B2E0065EABB /* DetailProtocols.swift in Sources */,
+				4D937341275D227200B53555 /* MainFactroy.swift in Sources */,
 				4D6257C1275CF3F00098419C /* Region.swift in Sources */,
 				CEFC5226222C9AFF0065EABB /* DetailView.swift in Sources */,
 				CE5D6FFE22291DEF00BA84F8 /* MainInteractor.swift in Sources */,
+				4D937343275D237600B53555 /* DetailFactroy.swift in Sources */,
 				CE5D6FF82229152200BA84F8 /* MainView.swift in Sources */,
 				CE5D700022291E0200BA84F8 /* MainRouter.swift in Sources */,
 				4D6257B9275CD0540098419C /* Weather.swift in Sources */,

@@ -35,4 +35,8 @@ protocol MainRouterProtocol {
     func presentPostDetailScreen(for data: City)
 }
 
+protocol MainFactroyProtocol {
+    func makeWithNavigation() -> UINavigationController
+    func make() -> UIViewController
+}
 

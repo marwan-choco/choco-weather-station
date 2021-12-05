@@ -37,4 +37,6 @@ protocol DetailRouterProtocol {
     func dismiss(from view: DetailViewProtocol)
 }
 
-
+protocol DetailFactroyProtocol {
+    func make(city: City) -> UIViewController
+}
