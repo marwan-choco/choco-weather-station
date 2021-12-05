@@ -34,17 +34,8 @@ extension DetailPresenter {
         let region = regionMapper.map(city: city)
         let statusImage = weatherStatusMapper.map(status: weather.status)
         let regionImage = regionMapper.image(for: region)
-        
-        if region == .r4 {
-            return .init(
-                cityName: city.description,
-                topImage: regionImage,
-                temperature: weather.temperature,
-                windSpeed: weather.windSpeed,
-                regionName: region.description,
-                bottomImage: statusImage
-            )
-        } else {
+        switch region {
+        case .r1:
             return .init(
                 cityName: city.description,
                 topImage: statusImage,
@@ -52,6 +43,33 @@ extension DetailPresenter {
                 windSpeed: weather.windSpeed,
                 regionName: region.description,
                 bottomImage: regionImage
+            )
+        case .r2:
+            return .init(
+                cityName: city.description,
+                topImage: statusImage,
+                temperature: weather.temperature,
+                windSpeed: weather.windSpeed,
+                regionName: region.description,
+                bottomImage: nil
+            )
+        case .r3:
+            return .init(
+                cityName: city.description,
+                topImage: nil,
+                temperature: weather.temperature,
+                windSpeed: weather.windSpeed,
+                regionName: region.description,
+                bottomImage: statusImage
+            )
+        case .r4:
+            return .init(
+                cityName: city.description,
+                topImage: regionImage,
+                temperature: weather.temperature,
+                windSpeed: weather.windSpeed,
+                regionName: region.description,
+                bottomImage: statusImage
             )
         }
     }
